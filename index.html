@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Allen John | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    
 </head>
-
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo">ALLEN.DEV</div>
         <input type="checkbox" id="menu-toggle" hidden>
         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
@@ -23,72 +42,65 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
-
-
     </nav>
 
     <!-- Hero Section -->
-    <div id="particles-js">
-        <section class="hero">
-            <div class="hero-left">
-                <h1>Hi, I am <span>Allen John</span> <br>I build responsive & modern websites.</h1>
-                <div class="buttons">
-                    <a href="https://github.com/AllenJohnn" class="btn outline" target="_blank">GitHub</a>
-                    <a href="assets/Allen John Joy.pdf" class="btn outline" download>Download CV</a>
-                </div>
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Hi, I am <span>Allen John</span><br>I build responsive & modern websites.</h1>
+            <p>Frontend developer and MCA student specializing in creating beautiful, functional web experiences.</p>
+            <div class="buttons">
+                <a href="https://github.com/AllenJohnn" class="btn primary" target="_blank">
+                    <i class="fab fa-github"></i> <span>GitHub</span>
+                </a>
+                <a href="assets/Allen John Joy.pdf" class="btn outline" download>
+                    <i class="fas fa-download"></i> <span>Download CV</span>
+                </a>
             </div>
-            <div class="hero-right">
-                <div class="bg-skew"></div>
+        </div>
+        <div class="hero-right">
+            <div class="image-wrapper">
                 <img src="./assets/profile.jpg" alt="Allen" />
             </div>
-        </section>
-    </div>
-
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-img">
-                    <img src="./assets/Allen Pic.jpg" alt="Profile Picture">
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="./assets/Allen Pic.jpg" alt="Profile Picture">
+            </div>
+            <div class="about-content">
+                <h5 class="section-subtitle">MY INTRODUCTION</h5>
+                <h2>About Me</h2>
+                <p>
+                    Frontend developer and MCA student skilled in React, Python, HTML, CSS and JavaScript. Focused on building responsive, clean, and user-friendly interfaces with a strong attention to detail.
+                </p>
+                <div class="about-details">
+                    <p><strong>Name:</strong> Allen John Joy</p>
+                    <p><strong>Email:</strong> allenjohnjoy2004@gmail.com</p>
+                    <p><strong>Phone:</strong> +91-62820-91469</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/allenjohnjoy/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/AllenJohnn" target="_blank"><i class="fab fa-github"></i></a></p>
                 </div>
-                <div class="about-content">
-                    <h5 class="section-subtitle">MY INTRODUCTION</h5>
-                    <h2>About Me</h2>
-                    <p>
-                        Frontend developer and MCA student skilled in React, Python, HTML CSS and JavaScript. Focused on building responsive, clean, and user-friendly interfaces with a strong attention to detail.
-                    </p>
-
-
-
-                    <div class="about-details">
-                        <p><strong>Name:</strong> Allen John Joy</p>
-                        <p><strong>Email:</strong> allenjohnjoy2004@gmail.com</p>
-                        <p><strong>Phone:</strong> +91-62820-91469</p>
-                        <p> <strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/allenjohnjoy/" target="_blank"><i
-                        class="fab fa-linkedin"></i></a></p>
-                        <p> <strong>GitHub</strong>  <a href="https://github.com/AllenJohnn" target="_blank" title="GitHub Profile">
-                    <i class="fa-brands fa-github"></i> </a></p>
-
-                    </div>
-                    <div class="interests">
-                        <span><i class="fas fa-music"></i> Music</span>
-                        <span><i class="fas fa-plane"></i> Travel</span>
-                        <span><i class="fas fa-film"></i> Movie</span>
-                        <span><i class="fas fa-futbol"></i> Sports</span>
-                    </div>
+                <div class="interests">
+                    <span><i class="fas fa-music"></i> Music</span>
+                    <span><i class="fas fa-plane"></i> Travel</span>
+                    <span><i class="fas fa-film"></i> Movie</span>
+                    <span><i class="fas fa-futbol"></i> Sports</span>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+    <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <h2>My Skills</h2>
         <div class="skills-slider">
             <div class="skills-track">
-                <!-- Skill Cards x2 for seamless loop -->
-                <!-- 1st Set -->
                 <div class="skill-card">
                     <img src="./assets/html.png" class="skill-icon" alt="HTML" />
                     <h4>HTML</h4>
@@ -113,13 +125,12 @@
                     <img src="./assets/git.png" class="skill-icon" alt="GitHub" />
                     <h4>GitHub</h4>
                 </div>
-                 <div class="skill-card">
+                <div class="skill-card">
                     <img src="./assets/angular.png" class="skill-icon" alt="Angular" />
                     <h4>Angular</h4>
                 </div>
                 
-
-                <!-- Duplicate set -->
+                <!-- Duplicate set for seamless loop -->
                 <div class="skill-card">
                     <img src="./assets/html.png" class="skill-icon" alt="HTML" />
                     <h4>HTML</h4>
@@ -144,7 +155,7 @@
                     <img src="./assets/git.png" class="skill-icon" alt="GitHub" />
                     <h4>GitHub</h4>
                 </div>
-                 <div class="skill-card">
+                <div class="skill-card">
                     <img src="./assets/angular.png" class="skill-icon" alt="Angular" />
                     <h4>Angular</h4>
                 </div>
@@ -152,9 +163,7 @@
         </div>
     </section>
 
-
-    <!-- Project card -->
-
+    <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <h2 class="section-title">My Projects</h2>
         <div class="projects-grid">
@@ -187,7 +196,11 @@
         </div>
     </section>
 
-    <!-- contact -->
+
+
+
+
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -203,80 +216,184 @@
                     <textarea rows="5" id="message" name="message" placeholder="Your Message" required></textarea>
                 </div>
                 <div class="button-group">
-                    <button type="button" class="btn primary" onclick="sendWhatsApp()">Send Message</button>
-                    <button type="submit" class="btn outline">Send Email</button>
+                    <button type="button" class="btn primary" onclick="sendWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> <span>Send via WhatsApp</span>
+                    </button>
+                    <button type="submit" class="btn outline">
+                        <i class="fas fa-paper-plane"></i> <span>Send Email</span>
+                    </button>
                 </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-
     <footer class="footer">
         <div class="footer-container">
-            <h3>Allen.DEV</h3>
+            <h3>ALLEN.DEV</h3>
             <p>Crafting frontend experiences with code & creativity ✨</p>
             <div class="social-icons">
                 <a href="https://github.com/AllenJohnn" target="_blank" title="GitHub Profile">
-                    <i class="fa-brands fa-github"></i> </a>
-
-                <a href="https://www.linkedin.com/in/allenjohnjoy/" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/allenjohnjoy/" target="_blank" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
             <p class="copyright">© 2025 Allen John. All rights reserved.</p>
         </div>
     </footer>
 
-    </section>
-
-
-
-
-
-
-
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
-        ScrollReveal().reveal('.hero-left', { origin: 'left', distance: '50px', duration: 1000, delay: 300 });
-        ScrollReveal().reveal('.hero-right', { origin: 'right', distance: '50px', duration: 1000, delay: 500 });
-        ScrollReveal().reveal('.navbar', { origin: 'top', distance: '20px', duration: 800, delay: 200 });
-        ScrollReveal().reveal('.about-img', { origin: 'left', distance: '50px', duration: 1000, delay: 200 });
-        ScrollReveal().reveal('.about-content', { origin: 'right', distance: '50px', duration: 1000, delay: 300 });
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = progress + '%';
 
+            // Show/hide scroll to top button
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Scroll to Top Function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Animated Counter for Stats
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        if (counter.textContent === '0') {
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.about-grid, .project-card, .contact-section .container, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stagger animation for project cards
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('menu-toggle').checked = false;
+                }
+            });
+        });
+
+        // Form handling functions
         function sendWhatsApp() {
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-            const phone = "916282091469"; 
-            const link = `https://wa.me/${phone}?text=${text}`;
-
-            window.open(link, "_blank");
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                const text = `Hello! My name is ${name}. Email: ${email}. Message: ${message}`;
+                const whatsappURL = `https://wa.me/916282091469?text=${encodeURIComponent(text)}`;
+                window.open(whatsappURL, '_blank');
+            } else {
+                alert('Please fill in all fields');
+            }
         }
 
         function handleFormSubmit(event) {
             event.preventDefault();
-            const form = event.target;
-
-            // Replace this with your FormSubmit endpoint
-            const formAction = "https://formsubmit.co/allenjohnjoy2004@gmail.com";
-
-            const formData = new FormData(form);
-            fetch(formAction, {
-                method: "POST",
-                body: formData,
-            })
-                .then(() => {
-                    alert("Email sent successfully!");
-                    form.reset();
-                })
-                .catch(() => {
-                    alert("Failed to send email.");
-                });
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const mailtoLink = `mailto:allenjohnjoy2004@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            window.location.href = mailtoLink;
         }
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroLeft = document.querySelector('.hero-left');
+            const heroRight = document.querySelector('.hero-right');
+            
+            if (heroLeft && heroRight && scrolled < window.innerHeight) {
+                heroLeft.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroRight.style.transform = `translateY(${scrolled * 0.2}px)`;
+            }
+        });
     </script>
 </body>
-
 </html>
